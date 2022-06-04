@@ -1,0 +1,12 @@
+DIMENSION	5			#nombre de variables
+
+BB_EXE		bb.exe
+
+BB_OUTPUT_TYPE	OBJ EB EB EB EB EB - - - -		#EB ou PB pour strictes ou lax respectivement
+
+X0		( 0.3 0.5 0.01 1 10)
+
+LOWER_BOUND	( 0.1 0.1 0.005 0.01 1)	# dans l'ordre a, b, c, n, delta
+UPPER_BOUND	( 0.5 1 0.1 5 100)	#Même ordre
+
+MAX_BB_EVAL	1000

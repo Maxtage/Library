@@ -1,0 +1,41 @@
+Constants
+
+mv = 8800; //en kg/m3
+rho = 1.724e-8; //en Ohm.m
+L=1e-3; //en H
+
+Variables
+a in [0.1,0.5]; //en m
+//a in [0.2999,0.3001];
+b in [0.1,1]; //en m
+//b in [0.4999,0.5001];
+c in [0.005,0.1]; //en m
+//c in [0.00999,0.01001];
+n in [10,5000]; //en m
+//delta in [1e6-1e3,1e6+1e3];
+delta in [1e5,1e7]; //en m
+I in [0,1000];
+//M in [0,1000];
+M in [20,100];
+//Pj in [0,1e6];
+Pj in [70,90];
+//W in [0,1000];
+//L in [0,1000];
+
+Minimize M
+
+Constraints
+
+//a=0.3;
+//b=0.5;
+//c=0.01;
+//n=1000;
+//delta=1e6;
+integer(n);
+L = (50.8e-9*(a^2)*(n^2))/(3*a+9*b+10*c);
+Pj = rho*(delta^2)*pi*a*b*c;
+M = mv*pi*a*b*c;
+I=delta*(b*c)/n;
+W=0.5*L*I*I;
+
+End

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dimensioning xmlns="http://www.bigeon.fr/vdesign/optim/1.0/optim">
+  <model model="ana:Air%20Coil%20bobine.ana"/>
+  <constraint active="true" level="0" name="a" normalization="1.0">
+    <expr>a</expr>
+    <definition type="BOX">
+      <value value="0.1"/>
+      <value value="0.5"/>
+    </definition>
+  </constraint>
+  <constraint active="true" level="0" name="b" normalization="1.0">
+    <expr>b</expr>
+    <definition type="BOX">
+      <value value="0.1"/>
+      <value value="1"/>
+    </definition>
+  </constraint>
+  <constraint active="true" level="0" name="c" normalization="1.0">
+    <expr>c</expr>
+    <definition type="BOX">
+      <value value="0.005"/>
+      <value value="0.1"/>
+    </definition>
+  </constraint>
+  <constraint active="true" level="0" name="delta" normalization="1.0">
+    <expr>delta</expr>
+    <definition type="BOX">
+      <value value="1e6"/>
+      <value value="10e6"/>
+    </definition>
+  </constraint>
+  <constraint active="true" level="0" name="Pj" normalization="1.0">
+    <expr>Pj</expr>
+    <definition type="BOX">
+      <value value="70"/>
+      <value value="90"/>
+    </definition>
+  </constraint>
+  <constraint active="true" level="0" name="L" normalization="1.0">
+    <expr>L</expr>
+    <definition type="EQUAL">
+      <value value="1e-3"/>
+    </definition>
+  </constraint>
+  <constraint active="true" level="0" name="M" normalization="1.0">
+    <expr>M</expr>
+    <definition type="BOX">
+      <value value="20"/>
+      <value value="100"/>
+    </definition>
+  </constraint>
+  <constraint active="true" level="0" name="n" normalization="1.0">
+    <expr>n</expr>
+    <definition type="BOX">
+      <value value="10"/>
+      <value value="5000"/>
+    </definition>
+  </constraint>
+  <objective name="M">
+    <expr>M</expr>
+  </objective>
+  <dataset parameter="a" value="0.3"/>
+  <dataset parameter="b" value="0.5"/>
+  <dataset parameter="c" value="0.01"/>
+  <dataset parameter="delta" value="1000000"/>
+  <dataset parameter="n" value="1000"/>
+  <parameter name="a"/>
+  <parameter name="b"/>
+  <parameter name="c"/>
+  <parameter name="delta"/>
+  <parameter name="n"/>
+</dimensioning>
