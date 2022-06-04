@@ -1,0 +1,24 @@
+/* 
+De: A.D. KONE, B. NOGAREDE, M. LAJOIE MAZENC, "Le dimensionnement des actionneurs électriques: 
+un problème de programmation non linéaire", dans "Journal de Physique III, Février 1993, pp. 285-301
+*/
+
+/* Equations de dimensionnement physique de l'actionneur */
+sigmaem = Math.PI/(2*lambda)*(1 - kf)*sqrt(kr*beta*ech*ge)*pow(d,2)*(d + ge)*be;
+ech = a*jcu;
+a = kr*ge*jcu;
+kf = 1.5*p*beta*(pe + ge)/d;
+be = (2*la*m)/(d*log((d + 2*ge)/(d - 2*(la + pe))));
+c = Math.PI*beta*be*d/(4*p*bfer);
+p = (Math.PI*d)/deltap;
+
+/* paramètre de contrôle */
+lambda = d/l;
+
+/* Equations de dimensionnement économique de l'actionneur */
+vu = Math.PI*d/lambda*(d + ge - pe - la)*(2*c + ge + pe + la);
+va = Math.PI*beta*la*d/lambda*(d - 2*pe - la);
+pj = Math.PI*rhocu*d/lambda*(d + ge)*ech;
+
+/* fonction objectif */
+fob = cvu*vu + cva*va + cpj*pj;

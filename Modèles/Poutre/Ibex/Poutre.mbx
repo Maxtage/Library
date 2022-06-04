@@ -1,0 +1,28 @@
+Constants
+E = 2*1e11; //en kg.m-3
+L = 4; //en m
+P = 1e4; //en kg.m.s-2
+rho = 7800; //en kg.m-3
+
+Variables
+x1 in [0.1,0.8]; //en m
+x2 in [0.1,0.6]; //en m
+x3 in [0.01,0.05]; //en m
+x4 in [0.01,0.05]; //en m
+S in [0,5]; //en m2
+M in [0,500]; //en kg
+I in [0,5];
+sigma in [0,12.8e6]; //en kg.m-1.s-2
+w in [0,5]; //en m
+
+Minimize M
+
+Constraints
+S = x2*x1 - (x1 - 2*x4)*(x2 - x3);
+M = L*S*rho;
+I = (((x1 - 2*x4)^3)*x3+2*(x4^3)*x2+6*x4*x2*(x1-x4)^2)/12 + ((2*x4*(x2^3))+(x1-2*x4)*(x3^3))/12;
+sigma = (P*L*(x1/2))/(4*I);
+w = (P*L^3)/(48*E*I);
+sigma<12.8*1e6;
+
+End

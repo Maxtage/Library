@@ -1,0 +1,54 @@
+Constants
+Gamma = 10; //en N.m
+kr=0.70; //sans unité
+P=0.9; //en T
+Biron = 1.50; //en T=N/(A.m)
+Ech = 10^11; // en A^2/m^3
+Deltap = 0.1; //en m
+rhocu = 0.018e-6; //en ohm.m=J.m/(s.A^2)
+//p = 10;
+Vum=2.4991*1e-4;
+Vam=0.2750*1e-4;
+Pjm=12.2349;
+
+Variables
+//Be in [0.441,0.442];
+Be in [0.1,1]; //en T
+//C in [0.0058,0.0059];
+C in [0.001,0.05]; //en m
+//D in [0.3183,0.31831];
+D in [0.01,0.5]; //en m
+//e in [0.0010003,0.0010004];
+e in [0.001,0.005]; //en m
+//E in [0.004302,0.004303];
+E in [0.001,0.005]; //en m
+//Jcu in [0.5761,0.5762];
+Jcu in [1e-2,1]; //en A/m^2
+//Kf in [0.19997,0.19998];
+Kf in [0.01,0.5]; //sans unité
+//la in [0.005164,0.005165];
+la in [0.001,0.05]; //en m
+//L in [0.0113113,0.0113114];
+L in [0.004,0.5]; //en m
+p in [1,10]; //sans unité
+//beta in [0.80019,0.8002];
+beta in [0.8,1]; //sans unité
+
+//Minimize (1e4)*pi*L*(D+E-e-la)*(2*C+E+e+la); //on minimize ici Vu.
+//Minimize (1e5)*pi*beta*la*L*(D-2*e-la); //on minimize ici Va.
+//Minimize pi*rhocu*L*(D+E)*Ech; //on minimize ici Pj.
+Minimize ((pi*L*(D+E-e-la)*(2*C+E+e+la))/Vum)+((pi*beta*la*L*(D-2*e-la))/Vam)+((pi*rhocu*L*(D+E)*Ech)/Pjm)
+
+Constraints
+Gamma = (pi/(2*(D/L)))*(1-Kf)*sqrt(kr*beta*Ech*E)*(D^2)*(D+E)*Be;
+Ech = kr*E*(Jcu*1e7)^2;
+Kf = 1.5*p*beta*(e+E)/D;
+Be = (2*la*P)/(D*ln((D+2*E)/(D-2*(la+e))));
+C = D*(pi*beta*Be)/(4*p*Biron);
+p = (pi*D)/Deltap;
+Kf <= 0.3;
+e >= 0.001;
+integer(p);
+// On a remplacé lambda par D/L pour réduire le nombre de variables
+
+End

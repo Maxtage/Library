@@ -1,0 +1,21 @@
+DIMENSION      5             # number of variables
+
+BB_EXE         bb2.exe         
+#BB_OUTPUT_TYPE OBJ PB - - - - - - - - - - - #On autorise les approximation sur le contraintes d'égalité 
+BB_OUTPUT_TYPE OBJ EB EB EB - - - - - 
+
+#X0             ( 0.0025 0.50 0.025 0.250 0.9) # starting point
+#X0	       ( 0.00100001 0.624322 0.00485593 0.011544 0.800136) # starting point proche de l'optimal de Vu pour test
+X0	       ( 0.001 0.5763904177042347 0.005228893727630279 0.0112423984421143 0.8) # starting point proche de l'optimal de Vu pour test
+#X0	       ( 0.001 0.475666 0.00588091 0.0112132 0.870426 ) # starting point proche de l'optimal de NOMAD
+
+LOWER_BOUND    ( 0.001 0.01 0.001 0.004 0.8) #Dans l'ordre e, Jcu, la, L, beta.
+UPPER_BOUND    ( 0.005 1 0.05 0.5 1)  # l'ordre est le même
+
+#MIN_MESH_SIZE	(1e-18 1e-18 1e-18 1e-18 1e-18)
+
+#DISPLAY_INFEASIBLE false
+
+MAX_BB_EVAL    10000	      # the algorithm terminates when
+                              # 1000 black-box evaluations have
+                              # been made
