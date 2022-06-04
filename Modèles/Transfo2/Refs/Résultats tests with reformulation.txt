@@ -1,0 +1,163 @@
+Test 1:
+
+precisionwidth=0.01
+double precisionmin=1 (sur un minimum de 2 million, sa fait 5e-5%)
+
+Upper bound updated 2085138.8672281469 Duration 5819.0 Iterations 192093
+Upper bound updated 2085138.5521409079 Duration 5819.0 Iterations 192108
+Upper bound updated 2085138.243056091 Duration 5819.0 Iterations 192117
+Upper bound updated 2085137.939974688 Duration 5819.0 Iterations 192124
+Upper bound updated 2085137.642897687 Duration 5820.0 Iterations 192135
+Upper bound updated 2085137.3518260801 Duration 5820.0 Iterations 192153
+Upper bound updated 2085137.0667608576 Duration 5820.0 Iterations 192163
+Upper bound updated 2085136.7877030105 Duration 5821.0 Iterations 192175
+Upper bound updated 2085136.5146535295 Duration 5821.0 Iterations 192181
+Upper bound updated 2085136.2476134065 Duration 5821.0 Iterations 192196
+Upper bound updated 2085135.9865836324 Duration 5822.0 Iterations 192213
+Upper bound updated 2085135.7315652 Duration 5822.0 Iterations 192223
+Upper bound updated 2085135.4825591014 Duration 5822.0 Iterations 192233
+Upper bound updated 2085135.2395663285 Duration 5823.0 Iterations 192243
+Upper bound updated 2085135.002587873 Duration 5823.0 Iterations 192258
+Upper bound updated 2085134.7716247295 Duration 5823.0 Iterations 192271
+Upper bound updated 2085134.5466778898 Duration 5824.0 Iterations 192279
+Upper bound updated 2085134.3277483478 Duration 5824.0 Iterations 192288
+Upper bound updated 2085134.1148370965 Duration 5824.0 Iterations 192293
+Upper bound updated 2085133.90794513 Duration 5824.0 Iterations 192309
+Upper bound updated 2085133.7070734422 Duration 5825.0 Iterations 192328
+Upper bound updated 2085133.5122230267 Duration 5825.0 Iterations 192338
+Upper bound updated 2085133.3233948792 Duration 5826.0 Iterations 192349
+Upper bound updated 2085133.1405899925 Duration 5826.0 Iterations 192361
+Upper bound updated 2085132.9638093633 Duration 5826.0 Iterations 192375
+Upper bound updated 2085132.793053985 Duration 5827.0 Iterations 192385
+Upper bound updated 2085132.6283248547 Duration 5827.0 Iterations 192394
+Upper bound updated 2085132.4696229673 Duration 5827.0 Iterations 192404
+Upper bound updated 2085132.3169493182 Duration 5828.0 Iterations 192418
+Upper bound updated 2085132.1703049047 Duration 5828.0 Iterations 192435
+Upper bound updated 2085132.029690721 Duration 5828.0 Iterations 192451
+Upper bound updated 2085131.8951077648 Duration 5829.0 Iterations 192461
+Upper bound updated 2085131.7665570332 Duration 5829.0 Iterations 192474
+Upper bound updated 2085131.644039523 Duration 5829.0 Iterations 192487
+Upper bound updated 2085131.5275562312 Duration 5830.0 Iterations 192497
+Upper bound updated 2085131.4171081549 Duration 5830.0 Iterations 192511
+Upper bound updated 2085131.3126962928 Duration 5830.0 Iterations 192522
+Upper bound updated 2085131.2143216417 Duration 5831.0 Iterations 192533
+Upper bound updated 2085131.1219852003 Duration 5831.0 Iterations 192546
+Upper bound updated 2085131.0356879667 Duration 5831.0 Iterations 192562
+Upper bound updated 2085130.9554309407 Duration 5832.0 Iterations 192579
+Upper bound updated 2085130.8812151197 Duration 5832.0 Iterations 192585
+Upper bound updated 2085130.813041503 Duration 5833.0 Iterations 192600
+Upper bound updated 2085130.7509110905 Duration 5833.0 Iterations 192612
+Upper bound updated 2085130.6948248823 Duration 5833.0 Iterations 192627
+Upper bound updated 2085130.6447838768 Duration 5834.0 Iterations 192638
+Upper bound updated 2085130.600789074 Duration 5834.0 Iterations 192650
+Upper bound updated 2085130.5628414762 Duration 5834.0 Iterations 192665
+Upper bound updated 2085130.5309420815 Duration 5835.0 Iterations 192678
+Upper bound updated 2085130.505091892 Duration 5835.0 Iterations 192691
+Upper bound updated 2085130.4852919078 Duration 5835.0 Iterations 192703
+Upper bound updated 2085130.4715431314 Duration 5836.0 Iterations 192720
+Upper bound updated 2085130.463846563 Duration 5836.0 Iterations 192733
+Upper bound updated 2085130.4622032042 Duration 5836.0 Iterations 192745
+minimum absolu = Infinity
+Durée totale = 34072.0 ms
+
+Meilleure solution trouvée 2085130.4622032042
+Longueur Fer correspondant= 3.512586764877134
+
+Paramètres de conception correspondants
+
+h= 0.728271484375
+N1= 289.91088867187506
+St= 4.0E7
+U1= 60000.0
+a= 0.048641704112081414
+al= 0.3955053044897709
+dm= 0.956912180068215
+Ff= 0.11318279585274008
+g= 0.048641704112081414
+Id= 0.7096287718440522
+MasseFer0= 21522.659527829102
+PertesCuivreTotales= 235489.58705816892
+PertesFerKG= 1.0219782000000013
+PertesFerTotales= 21995.688843463664
+PrixCuivre0= 99518.39149181877
+PrixFer0= 258271.91433394921
+s= 1.3333333333333334E7
+V1= 34641.016151377546
+ValPertesCuivreCapitalisees= 1177447.9352908446
+ValPertesFerCapitalisees= 549892.2210865916
+VolCuivre0= 0.4472736696261518
+VolFer0= 2.7593153240806543
+X= 0.12547987236562275
+X2= 11.293188512906047
+
+Test 2
+
+precisionwidth=0.001
+precisionmin=1
+Limite sur le nombre d'itérations: 1800000
+
+Upper bound updated 2085130.0980310482 Duration 52517.0 Iterations 1709225
+Upper bound updated 2085130.0950217072 Duration 52517.0 Iterations 1709240
+Upper bound updated 2085130.0921070161 Duration 52518.0 Iterations 1709258
+Upper bound updated 2085130.0892869786 Duration 52518.0 Iterations 1709269
+Upper bound updated 2085130.0865615946 Duration 52519.0 Iterations 1709290
+Upper bound updated 2085130.0839308668 Duration 52519.0 Iterations 1709306
+Upper bound updated 2085130.0813947988 Duration 52520.0 Iterations 1709322
+Upper bound updated 2085130.07895339 Duration 52520.0 Iterations 1709334
+Upper bound updated 2085130.0766066432 Duration 52520.0 Iterations 1709349
+Upper bound updated 2085130.0743545615 Duration 52521.0 Iterations 1709367
+Upper bound updated 2085130.0721971458 Duration 52521.0 Iterations 1709384
+Upper bound updated 2085130.0701343978 Duration 52522.0 Iterations 1709397
+Upper bound updated 2085130.0681663207 Duration 52522.0 Iterations 1709416
+Upper bound updated 2085130.0662929155 Duration 52522.0 Iterations 1709432
+Upper bound updated 2085130.0645141841 Duration 52523.0 Iterations 1709448
+Upper bound updated 2085130.0628301287 Duration 52523.0 Iterations 1709463
+Upper bound updated 2085130.0612407508 Duration 52524.0 Iterations 1709481
+Upper bound updated 2085130.0597460538 Duration 52524.0 Iterations 1709498
+Upper bound updated 2085130.0583460378 Duration 52525.0 Iterations 1709518
+Upper bound updated 2085130.0570407058 Duration 52525.0 Iterations 1709534
+Upper bound updated 2085130.05583006 Duration 52526.0 Iterations 1709548
+Upper bound updated 2085130.0547141018 Duration 52526.0 Iterations 1709567
+Upper bound updated 2085130.053692833 Duration 52527.0 Iterations 1709579
+Upper bound updated 2085130.0527662565 Duration 52527.0 Iterations 1709598
+Upper bound updated 2085130.0519343729 Duration 52527.0 Iterations 1709608
+Upper bound updated 2085130.0511971847 Duration 52528.0 Iterations 1709623
+Upper bound updated 2085130.050554695 Duration 52528.0 Iterations 1709648
+Upper bound updated 2085130.050006905 Duration 52529.0 Iterations 1709664
+Upper bound updated 2085130.0495538153 Duration 52529.0 Iterations 1709676
+Upper bound updated 2085130.0491954305 Duration 52529.0 Iterations 1709693
+Upper bound updated 2085130.0489317495 Duration 52530.0 Iterations 1709711
+Upper bound updated 2085130.0487627764 Duration 52530.0 Iterations 1709727
+Upper bound updated 2085130.0486885132 Duration 52531.0 Iterations 1709741
+minimum absolu = Infinity
+Durée totale = 54846.0 ms
+
+Meilleure solution trouvée 2085130.0486885132
+Longueur Fer correspondant= 3.5140126021553235
+
+Paramètres de conception correspondants
+
+h= 0.726751708984375
+N1= 289.78691101074224
+St= 4.0E7
+U1= 60000.0
+a= 0.04872257845696017
+al= 0.3956745109678871
+dm= 0.9572257104711875
+Ff= 0.11349367046769493
+g= 0.04872257845696017
+Id= 0.7097805535572672
+MasseFer0= 21526.053785176515
+PertesCuivreTotales= 235466.00686067127
+PertesFerKG= 1.0219782000000013
+PertesFerTotales= 21999.15770047791
+PrixCuivre0= 99508.42645109088
+PrixFer0= 258312.6454221182
+s= 1.3333333333333334E7
+V1= 34641.016151377546
+ValPertesCuivreCapitalisees= 1177330.0343033564
+ValPertesFerCapitalisees= 549978.9425119477
+VolCuivre0= 0.4472288829262512
+VolFer0= 2.7597504852790404
+X= 0.12575812143630274
+X2= 11.318230929267248

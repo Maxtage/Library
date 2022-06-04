@@ -1,0 +1,97 @@
+/* 
+   BE - CPM 2000
+   Transformateur
+
+   Equations utilisees pour generer l'application Pro@DESIGN
+
+   Equations issues de:
+   M. poloujadoff, R.D. Findlay, 
+   " A PROCEDURE FOR ILLUSTRATING THE EFFECT OF VARIATION OF PARAMETERS 
+     ON OPTIMAL TRANSFORMER DESIGN", IEEE Transactuions on Power Systems,
+   Vol. PWRS-1, No 4, November 1986 
+*/
+
+/* Definition de toutes les constantes du probleme */
+
+D1 = 0.05;
+D2 = 0.05;
+D3 = 0.05;
+D4 = 0.05;
+D5 = 0.05;
+DC = 8900;
+DI = 7800;
+fi = 0.8;
+F1 = 0.7;
+F2 = 0.7;
+mu0=1.257e-006;
+//pspc = 5;
+//pspf = 25;
+PrixC = 25;
+PrixI = 12;
+PrixEnergie = 0.2778e-3;
+roCu = 2.6e-008;
+
+/* Calcul de la puissance par colonne */
+s=st/3.0;
+
+/* Calcul de la tension simple par colonne a partir de la tension composee*/
+V1=U1/sqrt(3);
+
+
+/* Calcul de la largeur des bobines primaires et secondaires */
+a=(N1*s)/(V1*h*F1*j);
+g=(N1*s)/(V1*h*F2*j);
+
+/* Calcul du diametre moyen des bobines */
+dm=ld+2.0*D1+2.0*a+D2;
+
+/* Largeur d'une colonne du transformateur */
+ld=sqrt((2.0*sqrt(2.0)*V1)/(Math.PI*Math.PI*frequence*bt*N1*fi));
+
+/* surface d'une colonne du diametre*/
+al=(Math.PI/4.0)*ld*ld;
+
+
+/* Calcul de l'inductance de fuite */
+Ff=(D2+((a+g)/3.0))/h;
+X2=mu0*Math.PI*dm*N1*N1*(2.0*Math.PI*frequence)*Ff;
+/* Calcul de l'inductance de fuite P.U.*/
+X=X2/(V1*V1/s);
+
+/* Calcul du volume de fer */
+VolFer0=al*fi*(8.0*(D1+a+D2+g+D5)+6.0*ld+3.0*(h+D4+D3));
+/* Calcul de la masse de fer */
+MasseFer0=DI*VolFer0;
+
+/* Calcul du cout du fer */
+PrixFer0=PrixI*MasseFer0;
+/* Calcul du volume du cuivre */
+VolCuivre0=3.0*Math.PI*dm*h*(a*F1+g*F2);
+/* Calcul du cout du cuivre */
+PrixCuivre0=PrixC*DC*VolCuivre0;
+
+
+/* Calcul des pertes fer au Kilo: interpolation par les moindres carres */
+// JBJB PertesFerKG=PertesFerKG(bt);
+PertesFerKG=1.996-8.125*bt+12.277*bt*bt-7.502*bt*bt*bt+1.702*bt*bt*bt*bt;
+PertesFer17Tesla=1.996-8.125*1.7+12.277*1.7*1.7-7.502*1.7*1.7*1.7+1.702*1.7*1.7*1.7*1.7;
+/* Calcul des pertes fer totales*/
+PertesFerTotales=PertesFerKG*MasseFer0;
+/* calcul du taux d'actulisation */
+CoefActualisation=(1/Taux)*(1-pow(1/(1+Taux),NbrAn));
+
+/* Calcul des pertes fers capitalisees */
+//ValPertesFerCapitalisees=pspf*PertesFerTotales;
+ValPertesFerCapitalisees=CoefActualisation*PertesFerTotales*PrixEnergie*8760;
+
+/* Calcul des pertes cuivres totales */
+PertesCuivreTotales=roCu*VolCuivre0*j*j;
+/* Calcul des pertes cuivres capitalisees*/
+//ValPertesCuivreCapitalisees=pspc*PertesCuivreTotales;
+ValPertesCuivreCapitalisees=CoefActualisation*PertesCuivreTotales*PrixEnergie*8760/5;
+
+/* Calcul de la longueur totale du transformateur */
+//LongueurFer=4*D5+3*(ld+2*D1+2*g+2*D2+2*a);
+
+/* Calcul du prix total du transformateur*/
+fob=PrixFer0+PrixCuivre0+ValPertesFerCapitalisees+ValPertesCuivreCapitalisees;

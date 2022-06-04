@@ -1,0 +1,119 @@
+Approximation sur les contraintes: 2
+
+Number of Itérations= 74847845 Number of updates= 1
+Number of Itérations= 74847846 Number of updates= 1
+Number of Itérations= 74847847 Number of updates= 1
+minimum absolu = Infinity
+Durée totale = 2512122.0 ms (41mn)
+
+Meilleure solution trouvée 1588174.8903319708
+Longueur Fer correspondant= 4.230146601118077
+
+Paramètres de conception correspondants
+
+h= 0.421442419938189
+N1= 535.8081546318224
+St= 4.0E7
+U1= 60000.0
+a= 0.15534906072463836
+al= 0.2139969190611869
+dm= 0.9826840789234152
+Ff= 0.3643820204563534
+g= 0.15534906072463836
+Id= 0.5219859574741385
+MasseFer0= 11192.596665239409
+PertesCuivreTotales= 446949.37800284364
+PertesFerKG= 1.0219782000000013
+PertesFerTotales= 11438.589793267389
+PrixCuivre0= 188881.74094137264
+PrixFer0= 134311.1599828729
+s= 1.3333333333333334E7
+V1= 34641.016151377546
+ValPertesCuivreCapitalisees= 2234746.890014218
+ValPertesFerCapitalisees= 285964.74483168474
+VolCuivre0= 0.8489067008601018
+VolFer0= 1.4349482904153088
+X= 1.4170396784265111
+X2= 127.533571058386
+
+Approximation sur les contraintes: 1 
+Number of Itérations= 74847844 Number of updates= 1
+Number of Itérations= 74847845 Number of updates= 1
+Number of Itérations= 74847846 Number of updates= 1
+Number of Itérations= 74847847 Number of updates= 1
+minimum absolu = Infinity
+Durée totale = 2837948.0 ms (47mn)
+
+Meilleure solution trouvée 1588174.8903319708
+Longueur Fer correspondant= 4.230146601118077
+
+Paramètres de conception correspondants
+
+h= 0.421442419938189
+N1= 535.8081546318224
+St= 4.0E7
+U1= 60000.0
+a= 0.15534906072463836
+al= 0.2139969190611869
+dm= 0.9826840789234152
+Ff= 0.3643820204563534
+g= 0.15534906072463836
+Id= 0.5219859574741385
+MasseFer0= 11192.596665239409
+PertesCuivreTotales= 446949.37800284364
+PertesFerKG= 1.0219782000000013
+PertesFerTotales= 11438.589793267389
+PrixCuivre0= 188881.74094137264
+PrixFer0= 134311.1599828729
+s= 1.3333333333333334E7
+V1= 34641.016151377546
+ValPertesCuivreCapitalisees= 2234746.890014218
+ValPertesFerCapitalisees= 285964.74483168474
+VolCuivre0= 0.8489067008601018
+VolFer0= 1.4349482904153088
+X= 1.4170396784265111
+X2= 127.533571058386
+
+
+
+
+Approximation sur les contraintes: 0.1
+Number of Itérations= 185294284 Number of updates= 1
+Number of Itérations= 185294285 Number of updates= 1
+Number of Itérations= 185294286 Number of updates= 1
+Number of Itérations= 185294287 Number of updates= 1
+Number of Itérations= 185294288 Number of updates= 1
+minimum absolu = Infinity
+Durée totale = 6959168.0 ms (116mn)
+
+Meilleure solution trouvée 1688325.4463367485
+Longueur Fer correspondant= 3.9936574752287703
+
+Paramètres de conception correspondants
+
+h= 0.4000072813968741
+N1= 305.2890038279889
+St= 4.0E7
+U1= 60000.0
+a= 0.09325686776479787
+al= 0.37558278503759807
+dm= 1.0280387562133275
+Ff= 0.2804230082632903
+g= 0.09325686776479787
+Id= 0.6915250206837319
+MasseFer0= 19548.93326228987
+PertesCuivreTotales= 266413.2052957337
+PertesFerKG= 1.0219782000000013
+PertesFerTotales= 19978.583627315154
+PrixCuivre0= 112586.77716676304
+PrixFer0= 234587.19914747844
+s= 1.3333333333333334E7
+V1= 34641.016151377546
+ValPertesCuivreCapitalisees= 1332066.0264786684
+ValPertesFerCapitalisees= 499464.59068287886
+VolCuivre0= 0.5060079872663508
+VolFer0= 2.506273495165368
+X= 0.37037184810723844
+X2= 33.33346632965146
+
+

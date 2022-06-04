@@ -1,0 +1,117 @@
+Constants
+eisol = 1e-3 ; //en m
+f = 50 ; // en Hz
+fp = 0.8 ; // sans unité
+h = 10 ; // en W.m-2.K-1
+mvc = 8800 ; // en kg.m-3
+mvi = 7800 ; // en kg.m-3
+q = 1 ; // en m2.A2.kg-2
+Text = 40 ; // en °C
+V1 = 230 ; // en V
+V2 = 24 ; // en V
+alpha = 3.8*1e-3 ; // en K-1
+lambda = 0.15 ; // en W/(m.K)
+mu0 = 4*pi*1e-7 ; // en T.m/A
+rho = 1.72*1e-8 ; // en Ohm.m
+phi = sin(acos(fp));
+
+Variables
+a in [0.002,0.0225]; //en m
+//a in [0.018,0.0185];
+b in [0.006,0.095]; //en m
+//b in [0.054,0.055];
+c in [0.0035,0.04]; //en m
+//c in [0.018,0.019];
+d in [0.0052,0.465]; //en m
+//d in [0.0335,0.0336];
+I2 in [8,8.5]; //en A
+n1 in [200,1200]; //sans unité
+//n1 in [721,723];
+n2 in [1,1000]; //sans unité
+//n2 in [80,82];
+s1 in [0.05515,19.635]; // m2
+//s1 in [0.3318,0.332];
+s2 in [0.05515,19.635]; // m2
+//s2 in [2.835,2.84];
+Mtot in [0,5]; //en kg
+Tc in [50,120]; //en °C
+Ti in [30,100]; //en °C
+eta in [0.8,1]; //sans unité
+RapI in [0,0.1]; // = I10/I1
+RapV in [0,0.1]; // = DV2/V2
+f1 in [0,0.5]; // en %
+f2 in [0,0.5]; // en %
+Bm in [0.5,5];
+l1 in [0,50];
+l2 in [0,50];
+r1 in [5,20];
+r2 in [0,10];
+Sca in [0,5];
+Sia in [0,5];
+Rca in [0,20];
+Ria in [0,20];
+Rcond in [0,5];
+R2 in [0,5];
+Lmu in [5,25];
+X2 in [0,5];
+Q1 in [50,500];
+Mc in [0,3];
+Mi in [0,3];
+DV2 in [0,5];
+Pi in [0,50];
+Pj in [0,100];
+P1 in [0,1000];
+I1 in [0,10];
+I10 in [0,1];
+
+function mur(var)
+	return (1/((2.12*1e-4)+(((1-2.12*1e-4)*var^(2*7.358))/(var^(2*7.358)+1.18*1e6))));
+end
+
+//Minimize Mtot
+Minimize eta
+
+Constraints
+//a=18*1e-3;
+//b=54*1e-3;
+//c=18*1e-3;
+//d=33.5*1e-3;
+//s1=0.2463;
+//s2=2.54;
+//n1=611;
+//n2=69;
+integer(n1);
+integer(n2);
+Bm = (V1*sqrt(2))/(4*pi*n1*a*d*f);
+Lmu = (mu0*mur(Bm)*a*d*n1^2)/(2*a+b+c);
+l1 = 2*(d+2*a)+pi*c*(1/2);
+l2 = 2*(d+2*a)+pi*c*(3/2);
+Mi = mvi*4*a*d*(2*a+b+c);
+Pi = q*Mi*(f/50)*Bm^2;
+Rcond = eisol/(lambda*b*(4*a+2*d));
+Sca = b*(4*a+2*pi*c);
+Sia = 4*a*(b+4*a+2*c)+2*d*(6*a+2*c+b);
+Ria = 1/(h*Sia);
+Rca = 1/(h*Sca);
+
+X2 = mu0*((n1*(V2+I2*(R2*fp+X2*phi))/V1)^2)*c*(4*a+2*d+pi*c)*2*pi*f/(3*b);
+R2 = rho*(1+alpha*(Text + Rca*(Rcond*(R2*I2^2)+Ria*(R2*I2^2+Pi))/(Rca+Ria+Rcond)))*((V2+I2*(R2*fp+X2*phi))/V1)*n1*((l2/(s2*1e-6)) + (l1/(s1*1e-6))*((V2+I2*(R2*fp+X2*phi))/V1));
+
+Pj = R2*I2^2;
+Tc = Text + Rca*(Rcond*Pj+Ria*(Pj+Pi))/(Rca+Ria+Rcond);
+Ti = Text + Ria*(Rca*Pj+(Rca+Rcond)*Pi)/(Rca+Ria+Rcond);
+DV2 = I2*(R2*fp+X2*phi);
+n2 = n1*(V2+DV2)/V1;
+Mc = mvc*(n1*(s1*1e-6)*l1+n2*(s2*1e-6)*l2);
+Mtot = Mi + Mc;
+f1 = (2*n1*s1*1e-6)/(b*c);
+f2 = (2*n2*s2*1e-6)/(b*c);
+P1 = Pj + Pi + V2*I2*fp;
+Q1 = (V1^2)/(Lmu*2*pi*f)+X2*(I2^2)+V2*I2*phi;
+I1 = sqrt(P1^2+Q1^2)/V1;
+I10 = sqrt((Pi/V1)^2+(V1/(Lmu*2*pi*f))^2);
+RapI = I10/I1;
+RapV = DV2/V2;
+eta = (V2*I2*fp)/(V2*I2*fp+Pi+Pj);
+
+End

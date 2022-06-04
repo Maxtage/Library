@@ -1,0 +1,13 @@
+DIMENSION       8			#nombre de variables
+
+BB_EXE          bb.exe
+
+BB_OUTPUT_TYPE	OBJ EB EB EB EB EB EB EB EB EB -		#EB ou PB pour strictes ou lax respectivement
+
+#X0		( 0.0100 0.05 0.02 0.230 9 700 9 9)
+X0		( 0.018 0.054 0.018 0.0335 8.0 722 0.3318 2.835) # point test du modèle
+
+LOWER_BOUND	( 0.002 0.006 0.0035 0.0052 8 200 0.05515 0.05515)	# dans l'ordre a, b, c, d, I2, n1, s1, s2
+UPPER_BOUND	( 0.0225 0.095 0.04 0.465 - 1200 19.635 19.635)	#Même ordre
+
+MAX_BB_EVAL	10000

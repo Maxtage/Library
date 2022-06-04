@@ -1,0 +1,102 @@
+variables
+
+double D1=0.05;
+double D2=0.05;
+double D3=0.05;
+double D4=0.05;
+double D5=0.05;
+double DC=8900;
+double DI=7800;
+double fi=0.8;
+double F1=0.7;
+double F2=0.7;
+double mu0=1.257E-6;
+double pspc=5;
+double pspf=25;
+double PrixC=25;
+double PrixI=12;
+double roCu=2.6E-8;
+double Bt=1.7;
+double Frequence=50;
+double J=4500000;
+
+Interval h=new Interval(0.4,100);
+Interval N1=new Interval(100,600);
+Interval St=new Interval (40000000,40000000);
+Interval U1=new Interval (60000,60000);
+Interval a=new Interval(Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY);
+Interval al=new Interval(0,Double.POSITIVE_INFINITY);
+Interval dm=new Interval(Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY);
+Interval Ff=new Interval(0,Double.POSITIVE_INFINITY);
+Interval g=new Interval(Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY);
+Interval Id=new Interval(Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY);
+Interval MasseFer0=new Interval(0,Double.POSITIVE_INFINITY);
+Interval PertesCuivreTotales=new Interval(0,Double.POSITIVE_INFINITY);
+Interval PertesFerKG=new Interval(0,Double.POSITIVE_INFINITY);
+Interval PertesFerTotales=new Interval(0,Double.POSITIVE_INFINITY);
+Interval PrixCuivre0=new Interval(0,Double.POSITIVE_INFINITY);
+Interval PrixFer0=new Interval(0,Double.POSITIVE_INFINITY);
+Interval s=new Interval(Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY);
+Interval V1=new Interval(0,Double.POSITIVE_INFINITY);
+Interval ValPertesCuivreCapitalisees=new Interval(0,Double.POSITIVE_INFINITY);
+Interval ValPertesFerCapitalisees=new Interval(0,Double.POSITIVE_INFINITY);
+Interval VolCuivre0=new Interval(0,Double.POSITIVE_INFINITY);
+Interval VolFer0=new Interval(0,Double.POSITIVE_INFINITY);
+Interval X=new Interval(Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY);
+Interval X2=new Interval(Double.NEGATIVE_INFINITY,Double.POSITIVE_INFINITY);
+
+Interval h=b.getTInterval()[0].deepCopy();
+Interval N1=b.getTInterval()[1].deepCopy();
+Interval St=b.getTInterval()[2].deepCopy();
+Interval U1=b.getTInterval()[3].deepCopy();
+Interval a=b.getTInterval()[4].deepCopy();
+Interval al=b.getTInterval()[5].deepCopy();
+Interval dm=b.getTInterval()[6].deepCopy();
+Interval Ff=b.getTInterval()[7].deepCopy();
+Interval g=b.getTInterval()[8].deepCopy();
+Interval Id=b.getTInterval()[9].deepCopy();
+Interval MasseFer0=b.getTInterval()[10].deepCopy();
+Interval PertesCuivreTotales=b.getTInterval()[11].deepCopy();
+Interval PertesFerKG=b.getTInterval()[12].deepCopy();
+Interval PertesFerTotales=b.getTInterval()[13].deepCopy();
+Interval PrixCuivre0=b.getTInterval()[14].deepCopy();
+Interval PrixFer0=b.getTInterval()[15].deepCopy();
+Interval s=b.getTInterval()[16].deepCopy();
+Interval V1=b.getTInterval()[17].deepCopy();
+Interval ValPertesCuivreCapitalisees=b.getTInterval()[18].deepCopy();
+Interval ValPertesFerCapitalisees=b.getTInterval()[19].deepCopy();
+Interval VolCuivre0=b.getTInterval()[20].deepCopy();
+Interval VolFer0=b.getTInterval()[21].deepCopy();
+Interval X=b.getTInterval()[22].deepCopy();
+Interval X2=b.getTInterval()[23].deepCopy();
+
+		
+double h=dc[0];
+double N1=dc[1];
+double St=dc[2];
+double U1=dc[3];
+double a=dc[4];
+double al=dc[5];
+double dm=dc[6];
+double Ff=dc[7];
+double g=dc[8];
+double Id=dc[9];
+double MasseFer0=dc[10];
+double PertesCuivreTotales=dc[11];
+double PertesFerKG=dc[12];
+double PertesFerTotales=dc[13];
+double PrixCuivre0=dc[14];
+double PrixFer0=dc[15];
+double s=dc[16];
+double V1=dc[17];
+double ValPertesCuivreCapitalisees=dc[18];
+double ValPertesFerCapitalisees=dc[19];
+double VolCuivre0=dc[20];
+double VolFer0=dc[21];
+double X=dc[22];
+double X2=dc[23];
+
+
+
+
+

@@ -1,0 +1,42 @@
+{
+	"name": "Trivial",
+	"variables": [
+		{
+			"name": "x",
+			"integer": false,
+			"lower_bound": "0",
+			"upper_bound": "5",
+			"initial_guess": "2.5"
+		}
+	],
+	"constants": [
+		{
+			"name": "a",
+			"value": "2.5"
+		},
+		{
+			"name": "b",
+			"value": "-8"
+		},
+		{
+			"name": "c",
+			"value": "7"
+		},
+		{
+			"name": "alpha",
+			"value": "0.1"
+		},
+		{
+			"name": "beta",
+			"value": "5"
+		}
+	],
+	"constraints": [
+		{
+			"expression": "a*x^2+(b-alpha)*x+(c-beta)",
+			"type": "<=",
+			"relaxable": false
+		}
+	],
+	"objective_function": "a*x^2+b*x+c"
+}

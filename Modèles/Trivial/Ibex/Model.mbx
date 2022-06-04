@@ -1,0 +1,16 @@
+Constants
+a=2.5;
+b=-8;
+c=7;
+alpha=0.1;
+beta=5;
+
+Variables
+x in [0,5];
+
+Minimize a*x^2+b*x+c
+
+Constraints
+a*x^2+(b-alpha)*x+(c-beta) <= 0;
+
+End

@@ -1,0 +1,18 @@
+DIMENSION       2			#nombre de variables
+
+BB_EXE          bb.exe
+
+BB_OUTPUT_TYPE	OBJ - - - - - - - - - - - - - - - - - -		#EB ou PB pour strictes ou lax respectivement
+
+BB_INPUT_TYPE 	(R I)
+
+X0		( 50.2 350)
+#X0		( 0.4 100)
+#X0		( 100 600)
+
+LOWER_BOUND	( 0.4 100)	# dans l'ordre h et N1
+UPPER_BOUND	( 100 600)	#Même ordre
+
+DISPLAY_STATS 	BBE [BBO] (SOL)
+
+MAX_BB_EVAL	1000

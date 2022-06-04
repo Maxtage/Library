@@ -1,0 +1,55 @@
+Constants
+D1 = 0.05; //en m
+D2 = 0.05; //en m
+D3 = 0.05; //en m
+D4 = 0.05; //en m
+D5 = 0.05; //en m
+Bt = 1.7; //en T
+freq = 50; //en Hz
+F1 = 0.7; //sans unité
+F2 = 0.7; //sans unité
+FI = 0.8; //sans unité
+J = 4500000; //en A.m^-2
+Pc = 25; //en $/kg
+Pi = 12; //en $/kg
+pspc = 5; //en $/W
+pspi = 25; //en $/W
+St = 40000000; //en kg.m^2.s-3
+U1 = 60000; //en V
+rho = 2.6*1e-8; //en Ohm.m
+rhoc = 8900; //en kg.m^-3
+rhoi = 7800; //en kg.m^-3
+mu = 4*pi*1e-7; // en kg.m.A^-2.s^-2
+
+Variables
+h in [0.4,100]; //en m
+N1 in [100,600]; //sans unité
+X in [0,3]; //en %
+PrixTotal in [1e6,1e7]; //en $
+
+Minimize PrixTotal
+
+Constraints
+
+integer(N1);
+S = St/3;
+V1 = U1/sqrt(3);
+A=(N1*S)/(V1*h*F1*J);
+G=(N1*S)/(V1*h*F2*J);
+Ff=(D2+(A+G)/3)/h;
+Ld=sqrt((2*sqrt(2)*V1)/((pi^2)*freq*Bt*N1*FI));
+Dm=Ld+2*D1+2*A+D2;
+X2=mu*(pi^2)*Dm*(N1^2)*2*freq*Ff;
+X=(X2*S)/(V1^2);
+Al=(pi*Ld^2)/4;
+VC=3*pi*Dm*h*(A*F1+G*F2);
+VI=Al*FI*(8*(D1+A+D2+G+D5)+6*Ld+3*(h+D4+D3));
+PC=Pc*rhoc*VC;
+PI=Pi*rhoi*VI;
+PCc=rho*VC*J^2;
+PCi=rhoi*VI*(1.996-8.125*Bt+12.277*Bt^2-7.502*Bt^3+1.702*Bt^4);
+TC=pspc*PCc;
+TI=pspi*PCi;
+PrixTotal=PC+TC+PI+TI;
+
+End
