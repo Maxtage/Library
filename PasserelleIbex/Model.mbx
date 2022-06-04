@@ -1,0 +1,16 @@
+Constants
+Const1=0.3;
+Const2=1e2;
+
+Variables
+Var1 in [0.1,1];
+Var2 in [1,10];
+
+Minimize Var1*Const1+Var2*Const2
+
+Constraints
+integer(Var2);
+Const1-Var1 <= 0;
+Var2^Var1-Const2 = 0;
+
+End
