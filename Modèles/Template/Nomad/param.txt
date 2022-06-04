@@ -1,0 +1,12 @@
+DIMENSION       1		#number of variables
+
+BB_EXE          bb.exe
+
+BB_OUTPUT_TYPE	OBJ EB		#EB or PB for strict or relaxable constraints 
+
+X0		( 2.5)		#In order
+
+LOWER_BOUND	( 0)	        #In order
+UPPER_BOUND	( 5)	        #In order
+
+MAX_BB_EVAL	1000

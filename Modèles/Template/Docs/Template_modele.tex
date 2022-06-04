@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\usepackage{amsmath}
+
+\begin{document}
+\begin{center}
+\fbox{\LARGE \textbf{Titre Modèle}}
+\end{center}
+\bigskip
+
+\large{\underline{\textbf{Description du modèle}:}}\\\\\normalsize
+Le modèle décrit ci-après est tiré de \cite{Doc1}. \\
+
+\underline{\textbf Nomenclature:}
+\begin{itemize}
+	\item $ X_{1} $ la grandeur 1 en $ Unité 1 $
+	\item $ X_{2} $ la grandeur 2 en $ Unité 2 $\\
+\end{itemize}
+
+\underline{\textbf Equations:}
+\begin{itemize}
+	\item $ X_{1}^{2} = X_{2} $\\\\
+\end{itemize}
+
+\large{\underline{\textbf{Cahier des Charges}:}}\\\\\normalsize
+Dans cet exemple, on fixe $ X_{1} $ ainsi qu'un certain nombre de grandeurs désignées comme paramètres et on cherche les variables de décision qui minimisent $ l'objectif $ en respectant les contraintes.\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+ \hline
+ \multicolumn{5}{|c|}{Variables de Décision} \\
+ \hline
+ Paramètre & Valeur min & Valeur max & Valeur initiale & Unité\\
+ \hline
+ $ X_{1} $ & $ 0.1 $ & $ 1.0 $ & $ 0.5 $ & $ Unité 1 $\\
+ \hline
+ $ X_{2} $ & \multicolumn{3}{c|}{$ 1.0 $} & $ Unité 2 $ \\
+ \hline
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+ \hline
+ \multicolumn{4}{|c|}{Sorties} \\
+ \hline
+ Paramètre & Type & Valeur & Unité\\
+ \hline
+ $ X_{1} $ & $ Fixe $ & $ 10 $ & $ Unité 1 $\\
+ \hline
+ $ X_{2} $ & $ Libre $ & $ - $ & $ Unité 2 $\\
+ \hline
+\end{tabular}
+\end{center}
+
+\underline{\textbf Fonction Objectif:}\\
+\[ f_{obj}(V) = X_{1}^{2} + \sqrt{X_{2}} \]\\
+
+\large{\underline{\textbf{Test de Fiabilité}:}}\\
+
+\normalsize
+Afin de vérifier la validité du modèle proposé, il convient de tester ce dernier avec plusieurs sets de valeurs. Vous trouverez ci-après un ensemble de valeurs d'entrée et les résultats attendus sur la base des valeurs de \cite{Doc1}.\\
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+ \hline
+ Numéro du set & Set 1 & Set 2 & Set 3 & Set 4\\
+ \hline
+ $ X_{1} $ & $ X_{1}^{1} $ & $ X_{1}^{2} $ & $ X_{1}^{3} $ & $ X_{1}^{4} $ \\
+ \hline
+ $ X_{2} $ & $ X_{2}^{1} $ & $ X_{2}^{2} $ & $ X_{2}^{3} $ & $ X_{2}^{4} $ \\
+ \hline
+\end{tabular}
+\end{center}
+
+
+\bibliography{Biblio}
+\bibliographystyle{ieeetr}
+
+\end{document}

@@ -1,0 +1,42 @@
+{
+	"name": "Model",
+	"variables": [
+		{
+			"name": "Var1",
+			"integer": false,
+			"lower_bound": "0.1",
+			"upper_bound": "1",
+			"initial_guess": "0.4"
+		},
+		{
+			"name": "Var2",
+			"integer": true,
+			"lower_bound": "1",
+			"upper_bound": "10",
+			"initial_guess": "7"
+		}
+	],
+	"constants": [
+		{
+			"name": "Const1",
+			"value": "0.3"
+		},
+		{
+			"name": "Const2",
+			"value": "1e2"
+		}
+	],
+	"constraints": [
+		{
+			"expression": "Const1-Var1",
+			"type": "<=",
+			"relaxable": false
+		},
+		{
+			"expression": "Var2^Var1-Const2",
+			"type": "=",
+			"relaxable": true
+		}
+	],
+	"objective_function": "Var1*Const1+Var2*Const2"
+}
